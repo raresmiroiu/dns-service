@@ -1,4 +1,5 @@
 mod dns_packet_builder;
+mod dns_packet;
 
 use crate::dns_packet_builder::DnsPacketBuilder;
 

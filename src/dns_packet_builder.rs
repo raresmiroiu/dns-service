@@ -1,3 +1,7 @@
+use crate::dns_packet::dns_question::DnsQuestion;
+use crate::dns_packet::dns_header::DnsHeader;
+use crate::dns_packet::dns_resource_record::DnsResourceRecord;
+use crate::dns_packet::DnsPacket;
 pub struct DnsPacketBuilder{
     id: u16,
     flags: u16,

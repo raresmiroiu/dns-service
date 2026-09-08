@@ -11,4 +11,6 @@ pub struct DnsPacket{
     pub header: DnsHeader,
     pub questions: Vec<DnsQuestion>,
     pub answers: Vec<DnsResourceRecord>,
+    pub authorities: Vec<DnsResourceRecord>,
+    pub additionals: Vec<DnsResourceRecord>,
 }
