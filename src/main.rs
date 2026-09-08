@@ -2,7 +2,7 @@ mod dns_packet_builder;
 mod dns_packet;
 
 use crate::dns_packet_builder::DnsPacketBuilder;
-
+use crate::dns_packet::DnsQuestion;
 fn main() {
     let packet1 = DnsPacketBuilder::new(0x1234)
         .set_flags(0x1000)

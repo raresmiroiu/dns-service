@@ -1,4 +1,5 @@
-pub use crate::dns_packet::DnsPacket;
+use crate::dns_packet::{DnsHeader, DnsPacket, DnsQuestion, DnsResourceRecord};
+
 pub struct DnsPacketBuilder{
     id: u16,
     flags: u16,
