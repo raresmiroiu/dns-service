@@ -1,7 +1,4 @@
-use crate::dns_packet::dns_question::DnsQuestion;
-use crate::dns_packet::dns_header::DnsHeader;
-use crate::dns_packet::dns_resource_record::DnsResourceRecord;
-use crate::dns_packet::DnsPacket;
+pub use crate::dns_packet::DnsPacket;
 pub struct DnsPacketBuilder{
     id: u16,
     flags: u16,
@@ -46,10 +43,10 @@ impl DnsPacketBuilder{
         let header = DnsHeader{
             id: self.id,
             flags: self.flags,
-            qdcount: self.qdcount,
-            ancount: self.ancount,
-            nscount: self.nscount,
-            arcount: self.arcount,
+            qdcount: self.questions.len() as u16,
+            ancount: self.answers.len() as u16,
+            nscount: self.authorities.len() as u16,
+            arcount: self.additionals.len() as u16,
         };
         DnsPacket{
             header,
