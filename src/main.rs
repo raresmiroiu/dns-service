@@ -1,7 +1,10 @@
-mod dns_packet;
+mod dns_packet_builder;
 
-use crate::dns_packet::DnsPacket;
+use crate::dns_packet_builder::DnsPacketBuilder;
 
 fn main() {
-    let packet = DnsPacket;
+    let packet1 = DnsPacketBuilder::new(0x1234)
+        .set_flags(0x1000)
+        .add_question(DnsQuestion::new("example.com",1,1))
+        .build();
 }
