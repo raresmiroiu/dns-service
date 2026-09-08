@@ -57,4 +57,7 @@ impl DnsPacketBuilder{
             additionals: self.additionals,
         }
     }
+    pub fn to_wire(self) ->Vec<u8>{
+
+    }
 }

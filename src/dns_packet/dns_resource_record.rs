@@ -1,5 +1,3 @@
-use std::net::Ipv4Addr;
-
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct DnsResourceRecord{
     pub rr_name: String,
